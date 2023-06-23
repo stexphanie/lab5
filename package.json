@@ -1,0 +1,22 @@
+{
+  "name": "lab5",
+  "version": "1.0.0",
+  "description": "A Jest + npm lab session",
+  "main": "scr/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stexphanie/lab5.git"
+  },
+  "author": "Stephanie Addo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stexphanie/lab5/issues"
+  },
+  "homepage": "https://github.com/stexphanie/lab5#readme"
+}
