@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/stexphanie/lab5#readme",
   "dependencies": {
+    "geckodriver": "^4.0.4",
+    "selenium-webdriver": "^4.10.0",
     "underscore": "^1.13.6"
   },
   "devDependencies": {
