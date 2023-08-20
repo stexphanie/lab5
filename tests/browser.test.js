@@ -9,7 +9,7 @@ jest.setTimeout(1000 * 60 * 5); // 5 minuter
 // Det här körs innan vi kör testerna för att säkerställa att Firefox är igång
 beforeAll(async () => {
     console.log(fileUnderTest);
-    driver = await new Builder().forBrowser('chrome').build();
+    driver = await new Builder().forBrowser('firefox').build();
     await driver.get(fileUnderTest);
 });
 
@@ -31,4 +31,13 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.sendKeys("Bananer");
         await alert.accept();
     });
+});
+
+test('Should display a message when popping an item from the stack ', async () => {
+    let popBtn = await driver.findElement(By.id('pop'));
+    await popBtn.click();
+    let alertText = await driver.switchTo().alert().getText();
+    await driver.switchTo().alert().accept();
+
+    expect(alertText).toContain('Deleted');
 });
