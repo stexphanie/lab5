@@ -39,5 +39,5 @@ test('Should display a message when popping an item from the stack ', async () =
     let alertText = await driver.switchTo().alert().getText();
     await driver.switchTo().alert().accept();
 
-    expect(alertText).toContain('Deleted');
+    expect(alertText).toContain('Tog bort');
 });
